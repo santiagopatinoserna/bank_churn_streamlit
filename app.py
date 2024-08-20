@@ -1,6 +1,8 @@
 import streamlit as st
 from backend import load_and_analyze_data, clean_and_format_dataframe, univariate_analysis
 
+print("Import successful!")
+
 
 def main():
     st.title('Bank Churn Prediction Analysis')
