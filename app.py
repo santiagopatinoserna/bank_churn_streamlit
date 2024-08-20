@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
 import math
 import plotly.express as px
@@ -12,17 +11,26 @@ import scipy.stats as stats
 import streamlit as st
 from backend import load_and_analyze_data, clean_and_format_dataframe, univariate_analysis
 import sys
-print("Python version:", sys.version)
+import logging
 
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+
+# Print Python version and environment information
+print("Python version:", sys.version)
+print("Python executable:", sys.executable)
+print("Python path:", sys.path)
+
+# Try importing seaborn with detailed error logging
 try:
     import seaborn as sns
-    print("Seaborn is available.")
-except ModuleNotFoundError as e:
-    print("Seaborn not found:", e)
+    print("Seaborn version:", sns.__version__)
+    logging.info("Seaborn imported successfully")
+except Exception as e:
+    logging.error(f"Error importing seaborn: {str(e)}")
+    print(f"Error importing seaborn: {str(e)}")
 
-
-print("Import successful!")
-
+print("Import process completed")
 
 def main():
     st.title('Bank Churn Prediction Analysis')
