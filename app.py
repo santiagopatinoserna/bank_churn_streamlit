@@ -1,5 +1,16 @@
-import streamlit as st
+# app.py
+
 from backend import load_and_analyze_data, clean_and_format_dataframe, univariate_analysis
+import streamlit as st
+import sys
+print("Python version:", sys.version)
+
+try:
+    import seaborn as sns
+    print("Seaborn is available.")
+except ModuleNotFoundError as e:
+    print("Seaborn not found:", e)
+
 
 print("Import successful!")
 
