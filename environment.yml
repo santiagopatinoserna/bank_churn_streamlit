@@ -3,6 +3,11 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python=3.9
+  - pandas
+  - seaborn
+  - matplotlib
+  - streamlit
   - _py-xgboost-mutex=2.0
   - _tflow_select=2.2.0
   - abseil-cpp=20211102.0
