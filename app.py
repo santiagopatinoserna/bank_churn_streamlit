@@ -1,5 +1,15 @@
 # app.py
 import streamlit as st
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import math
+import plotly.express as px
+import re
+import statsmodels.api as sm
+import scipy.stats as stats
+import streamlit as st
 from backend import load_and_analyze_data, clean_and_format_dataframe, univariate_analysis
 import sys
 print("Python version:", sys.version)
